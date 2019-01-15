@@ -7,14 +7,18 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+add 到暫存區的 檔案經過確認後才 commit，commit前可以使用git diff --staged 來看目前 commit 跟 暫存區的差異，確定是預期的修正後就可以 commit 到 repository.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+branch 的概念可讓開發者大膽的去嘗試開發不同的功能，在開發的同時保留較穩定的版本(不同branch)，以確保每次的修正release後的版本都不會出大問題。開發完畢後再整進比較穩定的版本即可。
+
 
 How do the diagrams help you visualize the branch structure?
+使用此指令 git log --graph - -oneline banch1 branch2 branch3…
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+Auto 的好處就是方便，但是有的時候遇到電腦無法判斷的衝突，還是必須靠寫程式的人來判斷，決定留下那些修正。
+
